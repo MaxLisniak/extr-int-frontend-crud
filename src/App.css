@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+:root {
+  --default-width: 70vw;
+  --default-color: aliceblue;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p, ul{
+  padding: 6px 0px;
+  margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
+  align-items: center;
   flex-direction: column;
+}
+.navbar{
+  height: 50px;
+  background-color: rgba(128, 0, 128, 0.054);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: var(--default-width);
+  margin-bottom: 10px;
+  /* width: 100%; */
+}
+.navbar li{
+  width: fit-content;
+  list-style: none;
+}
+.nav-link{
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: purple;
+}
+* {
+  font-size: 1em;
+}
+#brand{
+  font-size: 2em;
+  font-weight: 900;
+}
+.error-message{ 
+  color:brown;
+  list-style:inside;
+}
+.form{
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: calc(100% - 20px);
+}
+.post-text{
+  background-color: rgba(128, 0, 128, 0.054);
+  padding: 10px;
+  width: calc(100%-20px);
+  border-radius: 5px;
+}
+.post-username, .post-created{
+  font-weight: bold;
+}
+.form-textarea{
+  background-color: var(--default-color);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  resize: vertical;
+  max-height: 200px;
+}
+.textarea-error{
+  background-color: rgba(165, 42, 42, 0.257);
+  color: black;
+}
+.form-element-blue{
+  background-color: var(--default-color);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  /* max-width: fit-content; */
+}
+.fit{
+  max-width: fit-content;
+}
+#post-list{
+  width: 100%;
+  padding: 0;
+}
+.container{
+  width: var(--default-width);
+}
+.post-form-container{
+  width: calc(100% - 20px);
+  border: 1px sandybrown solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.post-container{
+  width: calc(100% - 20px);
+  border: 1px skyblue solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.auth-form-container{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  margin: 10px 40%;
+  width: calc(var(--default-width) - 70px);
+  border: solid 5px rgba(128, 0, 128, 0.054);
+  border-radius: 5px;
+  padding: 30px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-form{
+  max-width: 500px;
 }
